@@ -952,11 +952,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Anelia\\source\\repos\\ReciepeApp\\ReciepeApp\\ReciepeApp.iOS\\ReciepeApp.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\Anelia\\source\\repos\\RecipeRecommenderApp\\ReciepeApp\\ReciepeApp.iOS\\ReciepeApp.iOS.csproj",
       "projectName": "ReciepeApp.iOS",
-      "projectPath": "C:\\Users\\Anelia\\source\\repos\\ReciepeApp\\ReciepeApp\\ReciepeApp.iOS\\ReciepeApp.iOS.csproj",
+      "projectPath": "C:\\Users\\Anelia\\source\\repos\\RecipeRecommenderApp\\ReciepeApp\\ReciepeApp.iOS\\ReciepeApp.iOS.csproj",
       "packagesPath": "C:\\Users\\Anelia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Anelia\\source\\repos\\ReciepeApp\\ReciepeApp\\ReciepeApp.iOS\\obj\\",
+      "outputPath": "C:\\Users\\Anelia\\source\\repos\\RecipeRecommenderApp\\ReciepeApp\\ReciepeApp.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [

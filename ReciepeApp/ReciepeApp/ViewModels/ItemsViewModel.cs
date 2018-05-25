@@ -18,7 +18,13 @@ namespace ReciepeApp.ViewModels
 
         public async Task<Meal> FindMeal()
         {
-            return  await DbContext.FindFavouriteAsync(MealType, KeyOne, KeyTwo, KeyThree);
+            Task<Meal> x = Task.Factory.StartNew(() => {
+                var t = DbContext.FindFavouriteAsync(MealType, KeyOne, KeyTwo, KeyThree);
+                return t;
+            });
+
+            return await x;
+            //return  await DbContext.FindFavouriteAsync(MealType, KeyOne, KeyTwo, KeyThree);
         }
 
         private string mealType;

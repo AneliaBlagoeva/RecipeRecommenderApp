@@ -10,13 +10,22 @@ namespace ReciepeApp.DataAccess
     public class DbContext
     {
 
-        public static async Task<Meal> FindFavouriteAsync(string mealType, string keyOne, string keyTwo, string keyThree)
+        public static  Meal FindFavouriteAsync(string mealType, string keyOne, string keyTwo, string keyThree)
         {
             SQLiteService neshto = new SQLiteService();
 
             SQLiteConnection db = neshto.DbConnection();
-            var result = await db.Find<Task<Meal>>(f => ((Task.FromResult<Meal>(f)).Result.Ingredients.Contains(keyOne))); ;
+            var result =  db.Find<Meal>(f => f.Ingredients.Contains(keyOne));
             return result;
         }
+
+        //public static async Task<Meal> FindFavouriteAsync(string mealType, string keyOne, string keyTwo, string keyThree)
+        //{
+        //    SQLiteService neshto = new SQLiteService();
+
+        //    SQLiteConnection db = neshto.DbConnection();
+        //    var result = await db.Find<Meal>(f => f.Ingredients.Contains(keyOne));
+        //    return result;
+        //}
     }
 }

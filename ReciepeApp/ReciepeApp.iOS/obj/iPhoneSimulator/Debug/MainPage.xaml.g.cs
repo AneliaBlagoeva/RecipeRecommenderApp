@@ -13,7 +13,8 @@
 namespace ReciepeApp {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\Anelia\\source\\repos\\ReciepeApp\\ReciepeApp\\ReciepeApp\\MainPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\Anelia\\source\\repos\\RecipeRecommenderApp\\ReciepeApp\\ReciepeApp\\MainPage." +
+        "xaml")]
     public partial class MainPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

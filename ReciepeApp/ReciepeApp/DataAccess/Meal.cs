@@ -16,5 +16,8 @@ namespace ReciepeApp.DataAccess
         public string PrepTime { get; set; }
         public string MealImage { get; set; }
         public string Name { get; set; }
+        
     }
+
+   
 }

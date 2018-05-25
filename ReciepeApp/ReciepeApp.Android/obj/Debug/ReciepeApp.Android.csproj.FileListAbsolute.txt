@@ -95,7 +95,3 @@ C:\Users\Anelia\source\repos\ReciepeApp\ReciepeApp\ReciepeApp.Android\obj\Debug\
 C:\Users\Anelia\source\repos\ReciepeApp\ReciepeApp\ReciepeApp.Android\obj\Debug\android\assets\System.Xml.pdb
 C:\Users\Anelia\source\repos\ReciepeApp\ReciepeApp\ReciepeApp.Android\obj\Debug\android\assets\Xamarin.Forms.Core.pdb
 C:\Users\Anelia\source\repos\ReciepeApp\ReciepeApp\ReciepeApp.Android\obj\Debug\android\assets\Xamarin.Forms.Xaml.pdb
-C:\Users\Anelia\source\repos\ReciepeApp\ReciepeApp\ReciepeApp.Android\bin\Debug\ReciepeApp.Android.dll
-C:\Users\Anelia\source\repos\ReciepeApp\ReciepeApp\ReciepeApp.Android\obj\Debug\linksrc\ReciepeApp.Android.dll.mdb
-C:\Users\Anelia\source\repos\ReciepeApp\ReciepeApp\ReciepeApp.Android\obj\Debug\linksrc\FormsViewGroup.dll.mdb
-C:\Users\Anelia\source\repos\ReciepeApp\ReciepeApp\ReciepeApp.Android\obj\Debug\linksrc\Xamarin.Forms.Platform.Android.dll.mdb

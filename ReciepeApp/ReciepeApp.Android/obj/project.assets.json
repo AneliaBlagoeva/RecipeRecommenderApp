@@ -910,11 +910,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Anelia\\source\\repos\\ReciepeApp\\ReciepeApp\\ReciepeApp.Android\\ReciepeApp.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Anelia\\source\\repos\\RecipeRecommenderApp\\ReciepeApp\\ReciepeApp.Android\\ReciepeApp.Android.csproj",
       "projectName": "ReciepeApp.Android",
-      "projectPath": "C:\\Users\\Anelia\\source\\repos\\ReciepeApp\\ReciepeApp\\ReciepeApp.Android\\ReciepeApp.Android.csproj",
+      "projectPath": "C:\\Users\\Anelia\\source\\repos\\RecipeRecommenderApp\\ReciepeApp\\ReciepeApp.Android\\ReciepeApp.Android.csproj",
       "packagesPath": "C:\\Users\\Anelia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Anelia\\source\\repos\\ReciepeApp\\ReciepeApp\\ReciepeApp.Android\\obj\\",
+      "outputPath": "C:\\Users\\Anelia\\source\\repos\\RecipeRecommenderApp\\ReciepeApp\\ReciepeApp.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
