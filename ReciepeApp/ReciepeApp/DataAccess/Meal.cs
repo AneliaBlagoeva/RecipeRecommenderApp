@@ -98,6 +98,7 @@ namespace ReciepeApp.DataAccess
             }
         }
 
+        private string name;
         public string Name
         {
             get
@@ -108,22 +109,36 @@ namespace ReciepeApp.DataAccess
             {
                 name = value;
             }
+        }
+
+        private string img;
+        public string Image
+        {
+            get
+            {
+                return img;
+            }
+            set
+            {
+                img = value;
+            }
 
         }
 
-        private string name;
+
 
         public Meal()
         {
 
         }
-        public Meal(string n, string ingr, string st, string cal, string prTime)
+        public Meal(string n, string ingr, string st, string cal, string prTime, string img)
         {
             Name = name;
             Ingredients = ingr;
             Steps = st;
             Calories = cal;
             PrepTime = prTime;
+            Image = img;
         }
 
     }

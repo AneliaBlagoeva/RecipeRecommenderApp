@@ -39,8 +39,23 @@ namespace ReciepeApp.DataAccess
                            ingredients,
                             item.Element("steps").Value,
                             item.Element("calories").Value,
-                            item.Element("prepTime").Value);
+                            item.Element("prepTime").Value,
+                            item.Element("mealImage").Value);
                         break;
+                    }
+                    else if (ingredients.Contains(keyOne) || ingredients.Contains(keyTwo) || ingredients.Contains(keyThree))
+                    {
+                        res = new Meal(item.Element("name").Value,
+                           ingredients,
+                            item.Element("steps").Value,
+                            item.Element("calories").Value,
+                            item.Element("prepTime").Value,
+                            item.Element("mealImage").Value);
+                        break;
+                    }
+                    else
+                    {
+                        res = new Meal();
                     }
                 }
                
