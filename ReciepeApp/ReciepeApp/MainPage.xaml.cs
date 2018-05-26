@@ -1,5 +1,7 @@
 ﻿using ReciepeApp.DataAccess;
+using ReciepeApp.Droid;
 using ReciepeApp.ViewModels;
+using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +22,7 @@ namespace ReciepeApp
 
         private async void OnLoginClicked(object sender, EventArgs e)
         {
-
+            
             var res = await viewModel.FindMeal();
             await DisplayAlert("Your reciepe", (Task.FromResult<Meal>(res)).Result.Ingredients, "OK");
         }

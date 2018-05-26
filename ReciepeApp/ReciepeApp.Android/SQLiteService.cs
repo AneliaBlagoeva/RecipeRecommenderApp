@@ -1,18 +1,22 @@
-﻿using ReciepeApp.Services;
-using SQLite;
-using System.IO;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Xml.Linq;
+using Android.App;
+using Android.Content;
+using Android.OS;
+using Android.Runtime;
+using Android.Views;
+using Android.Widget;
 
 namespace ReciepeApp.Droid
 {
-    public class SQLiteService : ISQLite
+    class SQLiteService
     {
-        public SQLiteConnection DbConnection()
+        public XDocument GetXML()
         {
-            var dbName = "Reciepe.db";
-            var path = Path.Combine(System.Environment.
-              GetFolderPath(System.Environment.
-              SpecialFolder.Personal), dbName);
-            return new SQLiteConnection(path);
+            return MainActivity.xml;
         }
     }
 }
