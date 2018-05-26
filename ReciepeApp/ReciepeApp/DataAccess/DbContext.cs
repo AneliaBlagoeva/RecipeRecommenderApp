@@ -1,13 +1,7 @@
 ﻿using ReciepeApp.Droid;
-using SQLite;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Remoting.Contexts;
-using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
-using static Android.InputMethodServices.InputMethodService;
 
 namespace ReciepeApp.DataAccess
 {
@@ -17,11 +11,6 @@ namespace ReciepeApp.DataAccess
         public static async Task<Meal> FindFavouriteAsync(string mealType, string keyOne, string keyTwo, string keyThree)
         {
             SQLiteService neshto = new SQLiteService();
-
-            //SQLiteConnection db = neshto.DbConnection();
-            //db.CreateTable<Meal>();
-            //var res = db.Execute(" SELECT ingredients FROM Meal");
-            //var result = db.Find<Meal>(f => f.Ingredients.Contains(keyOne));
 
             Meal res = new Meal();
             XDocument xml = neshto.GetXML();
@@ -61,18 +50,8 @@ namespace ReciepeApp.DataAccess
                
             }
 
-
             return res;
         
         }
-
-        //public static async Task<Meal> FindFavouriteAsync(string mealType, string keyOne, string keyTwo, string keyThree)
-        //{
-        //    SQLiteService neshto = new SQLiteService();
-
-        //    SQLiteConnection db = neshto.DbConnection();
-        //    var result = await db.Find<Meal>(f => f.Ingredients.Contains(keyOne));
-        //    return result;
-        //}
     }
 }

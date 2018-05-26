@@ -1,17 +1,12 @@
 ﻿using ReciepeApp.DataAccess;
-using ReciepeApp.Droid;
 using ReciepeApp.ViewModels;
-using SQLite;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace ReciepeApp
 {
-	public partial class MainPage : ContentPage
+    public partial class MainPage : ContentPage
 	{
         ItemsViewModel viewModel;
         public MainPage()
@@ -30,7 +25,12 @@ namespace ReciepeApp
             }
             else
             {
-                await DisplayAlert((Task.FromResult<Meal>(res)).Result.Name, (Task.FromResult<Meal>(res)).Result.Ingredients, "OK");
+                string img = (Task.FromResult<Meal>(res)).Result.MealImage;
+                string info = (Task.FromResult<Meal>(res)).Result.Name + (Task.FromResult<Meal>(res)).Result.Ingredients
+                    + (Task.FromResult<Meal>(res)).Result.Steps + (Task.FromResult<Meal>(res)).Result.PrepTime;
+
+                await Navigation.PushAsync(new ResultPage(img, info), false);
+                    //DisplayAlert((Task.FromResult<Meal>(res)).Result.Name, (Task.FromResult<Meal>(res)).Result.Ingredients, "OK");
             }
         }
     }

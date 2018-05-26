@@ -1,9 +1,4 @@
-﻿using SQLite;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ReciepeApp.DataAccess
+﻿namespace ReciepeApp.DataAccess
 {
     public class Meal
     {
