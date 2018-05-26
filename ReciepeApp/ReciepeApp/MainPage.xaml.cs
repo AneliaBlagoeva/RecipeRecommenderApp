@@ -24,7 +24,14 @@ namespace ReciepeApp
         {
             
             var res = await viewModel.FindMeal();
-            await DisplayAlert("Your reciepe", (Task.FromResult<Meal>(res)).Result.Ingredients, "OK");
+            if (res.Ingredients == "")
+            {
+                await DisplayAlert("Your reciepe", "Just go to the shop!", "OK");
+            }
+            else
+            {
+                await DisplayAlert((Task.FromResult<Meal>(res)).Result.Name, (Task.FromResult<Meal>(res)).Result.Ingredients, "OK");
+            }
         }
     }
 }
