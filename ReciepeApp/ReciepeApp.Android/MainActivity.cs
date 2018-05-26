@@ -29,14 +29,6 @@ namespace ReciepeApp.Droid
             using (StreamReader sr = new StreamReader(assets.Open("Test.XML")))
             {
                 xml = XDocument.Load(sr);
-                //foreach (XElement item in xml.Root.Elements("Table"))
-                //{
-
-                //    conditionName = item.Element("idMeal").Value;
-                //    break;
-
-                //    //do something
-                //}
             }
 
             global::Xamarin.Forms.Forms.Init(this, bundle);

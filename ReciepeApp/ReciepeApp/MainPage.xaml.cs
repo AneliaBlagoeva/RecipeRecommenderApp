@@ -12,6 +12,7 @@ namespace ReciepeApp
         public MainPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
             BindingContext = viewModel = new ItemsViewModel();
         }
 
