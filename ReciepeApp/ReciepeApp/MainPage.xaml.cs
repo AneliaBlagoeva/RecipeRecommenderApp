@@ -26,12 +26,13 @@ namespace ReciepeApp
             }
             else
             {
-                string img = (Task.FromResult<Meal>(res)).Result.MealImage;
-                string info = (Task.FromResult<Meal>(res)).Result.Name + (Task.FromResult<Meal>(res)).Result.Ingredients
-                    + (Task.FromResult<Meal>(res)).Result.Steps + (Task.FromResult<Meal>(res)).Result.PrepTime;
+                string img = (Task.FromResult<Meal>(res)).Result.Image;
+                string info = (Task.FromResult<Meal>(res)).Result.Name+
+                    "INGRIDIENTS\n\n" + (Task.FromResult<Meal>(res)).Result.Ingredients +
+                    "\nSTEPS\n\n" + (Task.FromResult<Meal>(res)).Result.Steps+
+                    "\nTIME" + (Task.FromResult<Meal>(res)).Result.PrepTime;
 
                 await Navigation.PushAsync(new ResultPage(img, info), false);
-                    //DisplayAlert((Task.FromResult<Meal>(res)).Result.Name, (Task.FromResult<Meal>(res)).Result.Ingredients, "OK");
             }
         }
     }

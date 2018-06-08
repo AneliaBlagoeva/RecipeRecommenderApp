@@ -5,16 +5,13 @@
              x:Class="ReciepeApp.MainPage">
 
     <StackLayout>
-        <Label TextColor="White" Text="Enter type of meal" FontAttributes="Bold" FontSize="8" />
+        
         <Entry Text="{Binding MealType}" TextColor="Silver" Placeholder="Breakfast, Snack, Lunch, Dinner" PlaceholderColor="Silver" />
 
-        <Label TextColor="White" Text="Enter key word one" FontAttributes="Bold" FontSize="8" />
         <Entry Text="{Binding KeyOne}" TextColor="Silver" Placeholder="Type ingridient one" PlaceholderColor="Silver" />
 
-        <Label TextColor="White" Text="Enter key word two" FontAttributes="Bold" FontSize="8" />
         <Entry Text="{Binding KeyTwo}" TextColor="Silver" Placeholder="Type ingridient two" PlaceholderColor="Silver" />
 
-        <Label TextColor="White" Text="Enter key word three" FontAttributes="Bold" FontSize="8" />
         <Entry Text="{Binding KeyThree}" TextColor="Silver" Placeholder="Type ingridient three" PlaceholderColor="Silver" />
 
         <Button Text="Влизане" TextColor="White" Clicked="OnLoginClicked" BackgroundColor="#f50057" HeightRequest="50"></Button>
