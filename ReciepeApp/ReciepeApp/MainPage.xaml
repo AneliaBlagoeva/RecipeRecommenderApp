@@ -6,7 +6,7 @@
 
     <StackLayout>
         
-        <Entry Text="{Binding MealType}" TextColor="Silver" Placeholder="Breakfast, Snack, Lunch, Dinner" PlaceholderColor="Silver" />
+        <Picker ItemsSource="{Binding Types}" SelectedItem="{Binding MealType}" TextColor="Silver"/>
 
         <Entry Text="{Binding KeyOne}" TextColor="Silver" Placeholder="Type ingridient one" PlaceholderColor="Silver" />
 

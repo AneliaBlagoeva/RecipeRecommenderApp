@@ -8,12 +8,14 @@ namespace ReciepeApp
 {
     public partial class MainPage : ContentPage
 	{
-        ItemsViewModel viewModel;
+        public ItemsViewModel viewModel = new ItemsViewModel();
         public MainPage()
         {
-            InitializeComponent();
+            
             NavigationPage.SetHasNavigationBar(this, false);
+            viewModel.MealType = viewModel.Types[0];
             BindingContext = viewModel = new ItemsViewModel();
+            InitializeComponent();
         }
 
         private async void OnLoginClicked(object sender, EventArgs e)
@@ -28,9 +30,9 @@ namespace ReciepeApp
             {
                 string img = (Task.FromResult<Meal>(res)).Result.Image;
                 string info = (Task.FromResult<Meal>(res)).Result.Name+
-                    "INGRIDIENTS\n\n" + (Task.FromResult<Meal>(res)).Result.Ingredients +
-                    "\nSTEPS\n\n" + (Task.FromResult<Meal>(res)).Result.Steps+
-                    "\nTIME" + (Task.FromResult<Meal>(res)).Result.PrepTime;
+                    "INGRIDIENTS\n\n" +"\n" + (Task.FromResult<Meal>(res)).Result.Ingredients +
+                    "\nSTEPS\n"+ "\n" + (Task.FromResult<Meal>(res)).Result.Steps+
+                    "\nTIME\n" + "\n" + (Task.FromResult<Meal>(res)).Result.PrepTime;
 
                 await Navigation.PushAsync(new ResultPage(img, info), false);
             }

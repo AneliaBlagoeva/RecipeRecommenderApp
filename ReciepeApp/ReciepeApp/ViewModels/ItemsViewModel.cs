@@ -1,25 +1,34 @@
 ﻿using ReciepeApp.DataAccess;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace ReciepeApp.ViewModels
 {
     public class ItemsViewModel : BaseViewModel
     {
+        private string mealType;
+        private string keyOne;
+        private string keyTwo;
+        private string keyThree;
+
+        public IList<string> Types { get; set; } = new List<string>()
+        {
+            "Breakfast",
+            "Breakfast Snack",
+            "Lunch",
+            "Lunch Snack",
+            "Dinner"
+        };
 
         public ItemsViewModel()
         {
-
+            this.MealType = Types[0];
         }
 
         public async Task<Meal> FindMeal()
         {
             return  await DbContext.FindFavouriteAsync(MealType, KeyOne, KeyTwo, KeyThree);
         }
-
-        private string mealType;
-        private string keyOne;
-        private string keyTwo;
-        private string keyThree;
 
         public string MealType
         {
@@ -72,6 +81,7 @@ namespace ReciepeApp.ViewModels
                 OnPropertyChanged();
             }
         }
+
 
     }
 }

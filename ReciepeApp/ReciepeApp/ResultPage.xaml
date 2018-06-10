@@ -12,11 +12,15 @@
                 <RowDefinition Height="*" />
                 <RowDefinition  Height="2*" />
             </Grid.RowDefinitions>
-            
-            <Label Text="{Binding Info}"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" Grid.Column="0" Grid.Row="1"/>
+
             <Image Source="{Binding Img}"  Grid.Column="0" Grid.Row="0"/>
+            
+            <ScrollView Grid.Row="1" Grid.Column="0" Orientation="Vertical">
+                <Label Text="{Binding Info}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"/>
+            </ScrollView>
+            
 
         </Grid>
     </ContentPage.Content>
