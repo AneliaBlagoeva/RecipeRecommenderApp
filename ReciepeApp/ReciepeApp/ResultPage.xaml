@@ -13,7 +13,7 @@
                 <RowDefinition  Height="2*" />
             </Grid.RowDefinitions>
 
-            <Image Source="{Binding Img}"  Grid.Column="0" Grid.Row="0"/>
+            <Image Source="{Binding Img}" Aspect="AspectFill" Grid.Column="0"  Grid.Row="0"/>
             
             <ScrollView Grid.Row="1" Grid.Column="0" Orientation="Vertical">
                 <Label Text="{Binding Info}"
