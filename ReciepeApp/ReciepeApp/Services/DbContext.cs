@@ -1,9 +1,10 @@
-﻿using ReciepeApp.Droid;
+﻿using ReciepeApp.DataAccess;
+using ReciepeApp.Droid;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace ReciepeApp.DataAccess
+namespace ReciepeApp.Services
 {
     public class DbContext
     {
@@ -19,6 +20,16 @@ namespace ReciepeApp.DataAccess
 
                 var ingredients = item.Element("ingredients").Value;
                 var type = item.Element("idCategory").Value;
+
+                switch(type)
+                    {
+                    case "1": type = "Breakfast";break;
+                    case "2": type = "Snack";break;
+                    case "3": type = "Lunch"; break;
+                    case "4": type = "Snack"; break;
+                    case "5": type = "Dinner"; break;
+
+                }
 
                 if (type == mealType)
                 {
