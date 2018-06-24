@@ -124,8 +124,15 @@
 
         public Meal()
         {
-
+            IdMeal = 0;
+            Name = " ";
+            Ingredients = " ";
+            Steps = " ";
+            Calories = " ";
+            PrepTime = " ";
+            Image = " ";
         }
+
         public Meal(string n, string ingr, string st, string cal, string prTime, string img)
         {
             Name = name;
