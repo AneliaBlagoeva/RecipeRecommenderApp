@@ -11,10 +11,10 @@ namespace ReciepeApp.Services
 
         public static async Task<Meal> FindFavouriteAsync(string mealType, string keyOne, string keyTwo, string keyThree)
         {
-            SQLiteService neshto = new SQLiteService();
+            SQLiteService service = new SQLiteService();
 
             Meal res = new Meal();
-            XDocument xml = neshto.GetXML();
+            XDocument xml = service.GetXML();
             foreach (XElement item in xml.Root.Elements("Table"))
             {
 
@@ -22,18 +22,22 @@ namespace ReciepeApp.Services
                 var type = item.Element("idCategory").Value;
 
                 switch(type)
-                    {
+                {
                     case "1": type = "Breakfast";break;
-                    case "2": type = "Snack";break;
+                    case "2": type = "Breakfast Snack"; break;
                     case "3": type = "Lunch"; break;
                     case "4": type = "Snack"; break;
                     case "5": type = "Dinner"; break;
+                    default : type = " ";break;
 
                 }
 
+
                 if (type == mealType)
                 {
-                    if(ingredients.Contains(keyOne) && ingredients.Contains(keyTwo) && ingredients.Contains(keyThree))
+                    if (keyOne != null && ingredients.Contains(keyOne)
+                       && keyTwo != null && ingredients.Contains(keyTwo) 
+                       && keyThree!=null && ingredients.Contains(keyThree))
                     {
                         res = new Meal(item.Element("name").Value,
                            ingredients,
@@ -43,7 +47,10 @@ namespace ReciepeApp.Services
                             item.Element("mealImage").Value);
                         break;
                     }
-                    else if (ingredients.Contains(keyOne) || ingredients.Contains(keyTwo) || ingredients.Contains(keyThree))
+
+                    else if ((keyOne != null && ingredients.Contains(keyOne)) 
+                            || (keyTwo!=null && ingredients.Contains(keyTwo))
+                            || (keyThree!=null && ingredients.Contains(keyThree)))
                     {
                         res = new Meal(item.Element("name").Value,
                            ingredients,
