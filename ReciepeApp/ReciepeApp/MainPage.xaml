@@ -14,7 +14,7 @@
 
         <Entry Text="{Binding KeyThree}" TextColor="Silver" Placeholder="Type ingridient three" PlaceholderColor="Silver" />
 
-        <Button Text="Влизане" TextColor="White" Clicked="OnLoginClicked" BackgroundColor="#f50057" HeightRequest="50"></Button>
+        <Button Text="Search" TextColor="White" Clicked="OnLoginClicked" BackgroundColor="#f50057" HeightRequest="50"></Button>
 
     </StackLayout>
 
