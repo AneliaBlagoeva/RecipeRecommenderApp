@@ -22,7 +22,7 @@ namespace ReciepeApp
         {
             
             var res = await viewModel.FindMeal();
-            if (res.Ingredients == "")
+            if (res.Ingredients == " ")
             {
                 await DisplayAlert("Your reciepe", "Just go to the shop!", "OK");
             }
@@ -30,9 +30,10 @@ namespace ReciepeApp
             {
                 string img = (Task.FromResult<Meal>(res)).Result.Image;
                 string info = (Task.FromResult<Meal>(res)).Result.Name+
-                    "INGRIDIENTS\n\n" +"\n" + (Task.FromResult<Meal>(res)).Result.Ingredients +
-                    "\nSTEPS\n"+ "\n" + (Task.FromResult<Meal>(res)).Result.Steps+
-                    "\nTIME\n" + "\n" + (Task.FromResult<Meal>(res)).Result.PrepTime;
+                    "INGRIDIENTS:\n" + (Task.FromResult<Meal>(res)).Result.Ingredients + "\n\n"+
+                    "STEPS:\n" + (Task.FromResult<Meal>(res)).Result.Steps + "\n\n" + 
+                    "TIME:\n" + (Task.FromResult<Meal>(res)).Result.PrepTime + "\n\n" +
+                    "CALORIES:\n"  + (Task.FromResult<Meal>(res)).Result.Calories;
 
                 await Navigation.PushAsync(new ResultPage(img, info), false);
             }
