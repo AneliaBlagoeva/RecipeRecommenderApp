@@ -1,4 +1,5 @@
 ﻿using ReciepeApp.DataAccess;
+using ReciepeApp.Services;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -23,6 +24,7 @@ namespace ReciepeApp.ViewModels
         public ItemsViewModel()
         {
             this.MealType = Types[0];
+
         }
 
         public async Task<Meal> FindMeal()
