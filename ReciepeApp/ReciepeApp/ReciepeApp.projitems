@@ -11,26 +11,22 @@
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)MainPage.xaml" />
-	<EmbeddedResource Include="$(MSBuildThisFileDirectory)ResultPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ResultPage.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)DataAccess\Category.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)DataAccess\DbContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\DbContext.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DataAccess\Meal.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-	<Compile Include="$(MSBuildThisFileDirectory)ResultPage.xaml.cs">
+    <Compile Include="$(MSBuildThisFileDirectory)ResultPage.xaml.cs">
       <DependentUpon>ResultPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemsViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ResultViewModel.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Services\" />
   </ItemGroup>
 </Project>

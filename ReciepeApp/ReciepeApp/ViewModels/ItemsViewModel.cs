@@ -24,7 +24,9 @@ namespace ReciepeApp.ViewModels
         public ItemsViewModel()
         {
             this.MealType = Types[0];
-
+            //this.KeyOne = " ";
+            //this.KeyTwo = " ";
+            //this.KeyThree = " ";
         }
 
         public async Task<Meal> FindMeal()
